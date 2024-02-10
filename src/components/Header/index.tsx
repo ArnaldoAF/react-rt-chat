@@ -20,6 +20,9 @@ export function Header() {
             </NavLink>
           </Typography>
           <Button color="inherit">Arnaldo</Button>
+          <NavLink to="/login" title="Log in">
+            Login
+          </NavLink>
           <Button color="inherit">Logout</Button>
         </Toolbar>
       </AppBar>
