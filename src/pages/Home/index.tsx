@@ -1,3 +1,5 @@
+import Button from '@mui/material/Button';
+
 export function Home() {
-  return <h1>HOME</h1>
+  return <Button variant="contained">Hello world</Button>;
 }
