@@ -1,18 +1,18 @@
-
-import { HashRouter } from 'react-router-dom'
-import { Router } from './Router'
 import { GlobalStyle } from './styles/global'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+import AuthProvider from "./provider/authProvider";
+import Routes from "./routes";
+
 
 const defaultTheme = createTheme();
 function App() {
 
   return (
     <ThemeProvider theme={defaultTheme}>
-
-      <HashRouter>
-        <Router />
-      </HashRouter>
+      <AuthProvider>
+          <Routes />
+      </AuthProvider>
       <GlobalStyle />
     </ThemeProvider>
   )

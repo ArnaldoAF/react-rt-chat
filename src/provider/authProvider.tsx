@@ -2,7 +2,8 @@ import axios from "axios";
 import { ReactNode, createContext, useContext, useEffect, useMemo, useState } from "react";
 
 interface authContextType {
-
+  token?: string | null,
+  setToken: (token: string) => void
 }
 
 const AuthContext = createContext({} as authContextType);
@@ -28,16 +29,16 @@ const AuthProvider = ({ children }: authProviderProps) => {
     }
   }, [token]);
 
-  const contextValue = useMemo(
-    () => ({
-      token,
-      setToken,
-    }),
-    [token]
-  );
+  // const contextValue = useMemo(
+  //   () => ({
+  //     token,
+  //     setToken,
+  //   }),
+  //   [token]
+  // );
 
   return (
-    <AuthContext.Provider value={contextValue}>
+    <AuthContext.Provider value={{token, setToken}}>
       {children}
     </AuthContext.Provider>
   );
