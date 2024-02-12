@@ -23,6 +23,9 @@ export function Header() {
           <NavLink to="/login" title="Log in">
             Login
           </NavLink>
+          <NavLink to="/sign-up" title="Log in">
+            Cadastro
+          </NavLink>
           <Button color="inherit">Logout</Button>
         </Toolbar>
       </AppBar>

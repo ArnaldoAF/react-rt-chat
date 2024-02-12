@@ -69,7 +69,7 @@ export default function LogIn() {
                     </Button>
                     <Grid container>
                         <Grid item xs>
-                            <NavLink to="/sing-up" title="Log in">
+                            <NavLink to="/sign-up" title="Log in">
                                 Não tem cadastro? Se cadastre
                             </NavLink>
                         </Grid>
